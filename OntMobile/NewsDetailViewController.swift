@@ -12,7 +12,10 @@ import SwiftSoup
 class NewsDetailViewController: UIViewController {
     @IBOutlet weak var image: UIImageView!
     
-    @IBOutlet weak var text: UILabel!
+    //@IBOutlet weak var text: UILabel!
+    @IBOutlet weak var text: UITextView!
+    
+    @IBOutlet weak var newsLabel: UILabel!
     
     var news: News?
     
@@ -43,6 +46,8 @@ class NewsDetailViewController: UIViewController {
                 }
                 
                 session.resume()
+                
+                self.newsLabel.text = news.title
             }
             catch {
                 

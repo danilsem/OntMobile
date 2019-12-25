@@ -15,6 +15,10 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var showButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +44,7 @@ class SecondViewController: UIViewController {
                 for group in groupsArray {
                     self.groups.append(group["nomer"] as! String)
                     self.groupPicker.reloadAllComponents()
+                    self.loadingIndicator.isHidden = true
                 }
             }
             
@@ -48,6 +53,8 @@ class SecondViewController: UIViewController {
         })
         
         session.resume()
+        
+        showButton.layer.cornerRadius = 5
     }
 
     @IBAction func showChanges(_ sender: Any) {

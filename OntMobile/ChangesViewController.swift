@@ -54,14 +54,19 @@ class ChangesViewController: UIViewController {
         
         let groupName = changesProtocol.groupName!
         
-        let url = "http://api.ontvkr.ru/izmenenia/search.php?s=\(dateFormated.string(from: changesProtocol.date!))&p=\(changesProtocol.groupName!)"
+        var url = "http://api.ontvkr.ru/izmenenia/search.php?s=\(dateFormated.string(from: changesProtocol.date!))&&p=\(changesProtocol.groupName!)"
         
-        let session = URLSession.shared.dataTask(with: URL(string: url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!) { data, _, _ in
+        self.firstLesson.text = "-----"
+        self.secondPara.text = "-----"
+        
+        url = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        
+        let session = URLSession.shared.dataTask(with: URL(string: url)!) { data, _, _ in
             
             var json: Dictionary<String, Any>!
             
             do {
-                json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Dictionary<String, Any>
+                json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? Dictionary<String, Any>
             } catch {
                 
             }
