@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import WebKit
 
 class ContactUsViewController: UIViewController {
 
+    @IBOutlet weak var contactWebView: WKWebView!
+    
     @IBAction func countactButtonTouch(_ sender: Any) {
         let alert = UIAlertController(title: "Обратная связь", message: "Сообщение успешно отправленно.\nЖдите ответа от администрации.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: nil))
@@ -20,6 +23,10 @@ class ContactUsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let url = URL(string: "https://docs.google.com/forms/d/e/1FAIpQLSe9cjxh_IwyNmZn4SMA2r8Oe1gjrlDXiFYYOLlOetlchT6XWg/viewform")
+        let request = URLRequest(url: url!)
+        contactWebView.load(request)
+        
     }
     
 

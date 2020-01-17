@@ -32,6 +32,7 @@ class FirstViewController: UIViewController {
         let session = URLSession.shared.dataTask(with: URL(string: "http://nt-orsk.ru/index.php/novosti")!) {
             (data, response, error) in
             
+            
             let dataHtml = String(data: data!, encoding: .utf8)
             
             DispatchQueue.main.async {
@@ -62,6 +63,7 @@ class FirstViewController: UIViewController {
                 catch {
                     print("Error")
                 }
+                
             }
         }
         

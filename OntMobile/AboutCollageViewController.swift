@@ -22,6 +22,8 @@ class OntAnnotation : NSObject, MKAnnotation {
 class AboutCollageViewController: UIViewController {
 
     @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var whiteView: UIView!
+    @IBOutlet weak var purpleView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +35,12 @@ class AboutCollageViewController: UIViewController {
         
         self.map.setRegion(region, animated: true)
         self.map.addAnnotation(annotation)
-    
+        
+        whiteView.layer.cornerRadius = 20.0
         
     }
+    
+    
     
 
     /*

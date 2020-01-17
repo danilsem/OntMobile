@@ -15,6 +15,10 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var showButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +28,7 @@ class SecondViewController: UIViewController {
         let session = URLSession.shared.dataTask(with: URL(string: "http://api.ontvkr.ru/gruppa/")!, completionHandler: { [weak self]
             data, _, error in
             guard let self = self else {return}
+            
             
             var json: Dictionary<String, Any>?
             
@@ -40,14 +45,18 @@ class SecondViewController: UIViewController {
                 for group in groupsArray {
                     self.groups.append(group["nomer"] as! String)
                     self.groupPicker.reloadAllComponents()
+                    self.loadingIndicator.isHidden = true
                 }
             }
+            
             
             //print(json?["records"] as! Array<Dictionary<String, Any>>)
             
         })
         
         session.resume()
+        
+        showButton.layer.cornerRadius = 5
     }
 
     @IBAction func showChanges(_ sender: Any) {
@@ -56,11 +65,13 @@ class SecondViewController: UIViewController {
             
             var groupName: String!
         }
-        let ch = Chang()
-        ch.date = datePicker.date
-        ch.groupName = groups[groupPicker.selectedRow(inComponent: 0)]
-            
-        performSegue(withIdentifier: "changesIdendifier", sender: ch)
+        if groups.count != 0 {
+            let ch = Chang()
+            ch.date = datePicker.date
+            ch.groupName = groups[groupPicker.selectedRow(inComponent: 0)]
+                
+            performSegue(withIdentifier: "changesIdendifier", sender: ch)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

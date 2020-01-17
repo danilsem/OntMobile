@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840FC24823AA1E34006A1CEF /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC24723AA1E34006A1CEF /* CircleView.swift */; };
 		846B2897238BC733004CCE29 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B2896238BC733004CCE29 /* NewsDetailViewController.swift */; };
+		84743F7923B342E1007EE229 /* ChangesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84743F7823B342E1007EE229 /* ChangesPageViewController.swift */; };
+		84743F7B23B34B53007EE229 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84743F7A23B34B53007EE229 /* TimetableViewController.swift */; };
 		847872B6239105D60018886B /* ChangesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847872B5239105D60018886B /* ChangesViewController.swift */; };
 		847872B92391201A0018886B /* AboutCollageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847872B82391201A0018886B /* AboutCollageViewController.swift */; };
+		847B6E7223B5E404006B9D03 /* TimetableShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B6E7123B5E404006B9D03 /* TimetableShowViewController.swift */; };
 		847F50F32387BEF300C64464 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F50F22387BEF300C64464 /* NewsCollectionViewCell.swift */; };
+		847F959123A8C1FF0079346E /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F959023A8C1FF0079346E /* BackgroundView.swift */; };
 		84A176862397769D00A2B903 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A176852397769D00A2B903 /* ContactUsViewController.swift */; };
 		84EDA504238521F40040CF7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDA503238521F40040CF7D /* AppDelegate.swift */; };
 		84EDA506238521F40040CF7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDA505238521F40040CF7D /* SceneDelegate.swift */; };
@@ -24,10 +29,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		840FC24723AA1E34006A1CEF /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		846B2896238BC733004CCE29 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		84743F7823B342E1007EE229 /* ChangesPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangesPageViewController.swift; sourceTree = "<group>"; };
+		84743F7A23B34B53007EE229 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		847872B5239105D60018886B /* ChangesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangesViewController.swift; sourceTree = "<group>"; };
 		847872B82391201A0018886B /* AboutCollageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCollageViewController.swift; sourceTree = "<group>"; };
+		847B6E7123B5E404006B9D03 /* TimetableShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableShowViewController.swift; sourceTree = "<group>"; };
 		847F50F22387BEF300C64464 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
+		847F959023A8C1FF0079346E /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		84A176852397769D00A2B903 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		84EDA500238521F40040CF7D /* OntMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OntMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EDA503238521F40040CF7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +104,11 @@
 				847872B5239105D60018886B /* ChangesViewController.swift */,
 				847872B82391201A0018886B /* AboutCollageViewController.swift */,
 				84A176852397769D00A2B903 /* ContactUsViewController.swift */,
+				847F959023A8C1FF0079346E /* BackgroundView.swift */,
+				840FC24723AA1E34006A1CEF /* CircleView.swift */,
+				84743F7823B342E1007EE229 /* ChangesPageViewController.swift */,
+				84743F7A23B34B53007EE229 /* TimetableViewController.swift */,
+				847B6E7123B5E404006B9D03 /* TimetableShowViewController.swift */,
 			);
 			path = OntMobile;
 			sourceTree = "<group>";
@@ -175,8 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84743F7B23B34B53007EE229 /* TimetableViewController.swift in Sources */,
+				840FC24823AA1E34006A1CEF /* CircleView.swift in Sources */,
 				84EDA50A238521F40040CF7D /* SecondViewController.swift in Sources */,
+				84743F7923B342E1007EE229 /* ChangesPageViewController.swift in Sources */,
 				847F50F32387BEF300C64464 /* NewsCollectionViewCell.swift in Sources */,
+				847F959123A8C1FF0079346E /* BackgroundView.swift in Sources */,
 				84EDA508238521F40040CF7D /* FirstViewController.swift in Sources */,
 				847872B92391201A0018886B /* AboutCollageViewController.swift in Sources */,
 				846B2897238BC733004CCE29 /* NewsDetailViewController.swift in Sources */,
@@ -185,6 +204,7 @@
 				84A176862397769D00A2B903 /* ContactUsViewController.swift in Sources */,
 				847872B6239105D60018886B /* ChangesViewController.swift in Sources */,
 				84EDA506238521F40040CF7D /* SceneDelegate.swift in Sources */,
+				847B6E7223B5E404006B9D03 /* TimetableShowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
